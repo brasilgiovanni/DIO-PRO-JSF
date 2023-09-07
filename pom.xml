@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.gio</groupId>         <!-- ID do Grupo do Projeto -->
+	<artifactId>meetapp</artifactId>      <!-- ID do Artefato (Nome do Projeto) -->
+	<version>0.0.1-SNAPSHOT</version>     <!-- Versão do Projeto -->
+	<packaging>war</packaging>            <!-- Tipo de Empacotamento (neste caso, WAR) -->
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- Dependência do JavaServer Faces (JSF) versão 2.2.10 (ano: 2014) -->
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.faces</artifactId>
+			<version>2.2.10</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Dependência do Weld Servlet para CDI (Contexts and Dependency Injection) versão 2.2.0.Final (ano: 2014) -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>2.2.0.Final</version>
+		</dependency>
+
+		<!-- Dependência do Jandex para indexação de classes (usado por Weld) versão 1.2.3.Final (ano: 2015) -->
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jandex</artifactId>
+			<version>1.2.3.Final</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Dependência do PrimeFaces versão 7.0 (ano: 2019) -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>7.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>  <!-- Nome final do artefato WAR -->
+		<plugins>
+			<!-- Plugin do Maven para Compilação -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.7</source>   <!-- Versão do Java a ser usada para compilação (ano: 2011) -->
+					<target>1.7</target>   <!-- Versão do Java para a qual o código será compilado (ano: 2011) -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
